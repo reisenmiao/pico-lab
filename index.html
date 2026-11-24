@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raspberry Pi Pico Starter Kit | Course</title>
+<link rel="stylesheet" href="pico-course.css?v=running-chapter">
+<script defer src="pico-catalog.js?v=timer-button-feedback"></script><script defer src="pico-course.js?v=timer-test-button"></script>
+<style>
+[hidden]{display:none!important}
+.public-guide{align-self:center;padding:clamp(18px,6cqw,48px);line-height:1.5}.public-guide h2{margin:.3em 0}.public-guide a,.kit-files a{color:#17664e}.public-guide button{display:block;margin-top:1.2em}
+.kit-files{border-top:1px solid #d6e1dc;margin-top:1rem}.kit-files input{max-width:100%;display:block;margin-top:.5em}
+#kit-manual,#kit-wiring{width:100%;height:100%;border:0}
+</style></head>
+<body>
+<header class="top">
+  <div class="brand"><span class="chip" aria-hidden="true">▦</span> Pico <b>Lab</b></div>
+  <span class="course-name">Raspberry Pi Pico Starter Kit</span>
+  <div class="top-actions" aria-label="Pico controls">
+    <button id="reset-bootsel" type="button" disabled hidden aria-label="Restart in BOOTSEL" title="Restart in BOOTSEL">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a8 8 0 1 1 .9 6M4 4v6h6"/></svg>
+    </button>
+    <button id="detect" type="button" aria-haspopup="dialog" aria-controls="pico-panel" aria-describedby="pico-state">Connect Pico</button>
+    <button id="files" aria-haspopup="dialog" aria-controls="files-panel">Course files</button>
+  </div>
+</header>
+<main>
+<aside><label for="track">Programming track</label><select id="track"><option value="arduino">Arduino IDE</option><option value="python">MicroPython</option><option value="piper">Piper Make</option></select><div class="outline"><h2>Course contents</h2><nav aria-label="Lessons"></nav></div><div class="compact"><label for="lesson">Lesson</label><select id="lesson"></select></div></aside>
+<section class="reader" aria-label="Lesson reader">
+<header class="lesson-head">
+  <div><small id="kicker"></small><h1 id="title"></h1></div>
+  <div class="lesson-materials" role="group" aria-label="Lesson material">
+    <div class="lesson-views">
+      <div class="lesson-view" id="example-control">
+        <button id="show-example" type="button" aria-pressed="false" aria-controls="example-pane">Code</button>
+        <button class="view-grip" type="button" aria-label="Move code pane" aria-controls="example-pane" title="Drag to reorder, or press to swap panes" disabled><span aria-hidden="true"></span></button>
+      </div>
+      <div class="lesson-view" id="guide-control">
+        <button id="show-guide" type="button" aria-pressed="true" aria-controls="guide-pane">PDF</button>
+        <button class="view-grip" type="button" aria-label="Move PDF pane" aria-controls="guide-pane" title="Drag to reorder, or press to swap panes" disabled><span aria-hidden="true"></span></button>
+      </div>
+      <div class="lesson-view" id="circuit-control">
+        <button id="show-circuit" type="button" aria-pressed="false" aria-controls="circuit-pane">Circuit</button>
+        <button class="view-grip" type="button" aria-label="Move circuit pane" aria-controls="circuit-pane" title="Drag to reorder, or use the arrow keys" disabled><span aria-hidden="true"></span></button>
+      </div>
+      <div class="lesson-view" id="sweep-control" hidden>
+        <button id="show-sweep" type="button" aria-pressed="false" aria-controls="sweep-pane">SG90 sweep</button>
+        <button class="view-grip" type="button" aria-label="Move SG90 sweep sheet" aria-controls="sweep-pane" title="Drag to reorder, or use the arrow keys" disabled><span aria-hidden="true"></span></button>
+      </div>
+    </div>
+    <select id="material" aria-label="Project source file" hidden></select>
+  </div>
+</header>
+<div class="viewer-board">
+<div class="viewer">
+  <section class="viewer-pane" id="example-pane" aria-label="Project source" hidden>
+    <div class="viewer-paper">
+      <div class="stage">
+        <div id="sketch-tools" class="sketch-tools" role="group" aria-label="Sketch actions" hidden>
+          <button type="button" id="edit-source" aria-label="Edit code" title="Edit code" aria-pressed="false" aria-controls="source-editor">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6 4 4M4 20l4.7-1 11-11a2.8 2.8 0 0 0-4-4l-11 11Z"/></svg>
+          </button>
+          <button type="button" id="compile-sketch" data-action="compile" aria-label="Compile sketch" title="Compile sketch" aria-controls="code">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>
+          </button>
+          <button type="button" id="run-sketch" data-action="run" aria-label="Run on Pico" title="Build, install and run on Pico" aria-controls="code">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 19 12 7 19.5Z" fill="currentColor" stroke="none"/></svg>
+          </button>
+          <button type="button" id="stop-sketch" data-action="stop" aria-label="Stop sketch" title="Stop sketch by restarting in BOOTSEL" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1" fill="currentColor" stroke="none"/></svg>
+          </button>
+          <button type="button" id="toggle-console" data-action="console" aria-label="Serial console" title="Serial console" aria-expanded="false" aria-controls="code">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 7 5 5-5 5m8 0h7"/></svg>
+          </button>
+        </div>
+        <pre id="code" class="source-code" hidden></pre>
+        <textarea id="source-editor" class="source-code" aria-label="Edit project source" spellcheck="false" autocapitalize="off" autocomplete="off" hidden></textarea>
+        <img id="blocks" alt="" hidden>
+      </div>
+      <footer class="pager">
+        <button id="prev" type="button" aria-label="Previous code page">Previous</button>
+        <span id="position" aria-live="polite"></span>
+        <div class="page-actions">
+          <button id="next" type="button" aria-label="Next code page">Next</button>
+          <button id="last" type="button" aria-label="Follow last code page" aria-pressed="false" title="Follow the last page as output arrives">Last</button>
+        </div>
+      </footer>
+    </div>
+  </section>
+  <section class="viewer-pane" id="guide-pane" aria-label="Lesson guide" hidden>
+    <div class="viewer-paper guide-paper">
+      <div class="stage"><img id="sheet" alt="">
+<div id="kit-info" class="public-guide" hidden><small>LAFVIN · LA045</small><h2 id="kit-topic"></h2><p>Read this lesson in the kit manual. Open your extracted kit folder to view the PDF and examples here.</p><a href="https://lafvintech.com/pages/tutorials" target="_blank" rel="noopener">Get the LA045 starter kit tutorials ↗</a><button type="button" id="kit-open">Open kit folder</button></div>
+<iframe id="kit-manual" title="Local kit manual" hidden></iframe></div>
+      <footer class="pager pdf-pager">
+        <div class="pdf-navigation" role="group" aria-label="PDF pages">
+          <button id="guide-prev" type="button" aria-label="Previous guide page" title="Previous page"><span aria-hidden="true">‹</span></button>
+          <button id="guide-next" type="button" aria-label="Next guide page" title="Next page"><span aria-hidden="true">›</span></button>
+        </div>
+      </footer>
+    </div>
+  </section>
+  <section class="viewer-pane" id="circuit-pane" aria-label="Chapter circuit" hidden>
+    <figure class="viewer-paper circuit-paper">
+      <figcaption><small id="circuit-label"></small><strong id="circuit-title"></strong></figcaption>
+      <a id="circuit-original" target="_blank" rel="noopener" title="Open full-size diagram in a new tab"><img id="circuit-image" alt=""></a>
+      <iframe id="kit-wiring" title="Wiring in the local kit manual" hidden></iframe><p id="circuit-note" hidden></p>
+    </figure>
+  </section>
+</div>
+</div>
+</section></main>
+<span class="sr-status" id="build-announcement" role="status"></span>
+<dialog id="files-panel" aria-labelledby="files-title">
+  <form method="dialog"><h2 id="files-title">Course files</h2><button aria-label="Close course files">Close</button></form><div id="downloads"></div>
+  <section class="kit-files"><h3>Starter kit materials</h3>
+  <p>Extract the LAFVIN kit, including the inner ZIP. Choose the folder containing C, MicroPython and Piper_Make to read its lessons in this tab.</p>
+  <p><a href="https://lafvintech.com/pages/tutorials" target="_blank" rel="noopener">Get the LA045 starter kit tutorials ↗</a></p><label>Open kit folder <input type="file" id="kit-picker" webkitdirectory multiple></label><p role="status" id="kit-status"></p>
+  <p>To install a downloaded UF2, hold BOOTSEL while plugging in an original Pico, then copy the file onto RPI-RP2. To compile edited sketches, use Arduino IDE.</p></section>
+</dialog>
+<dialog id="pico-panel" aria-labelledby="pico-title">
+  <form method="dialog"><h2 id="pico-title">Connect Pico</h2><button aria-label="Close Pico panel">Close</button></form>
+  <p id="pico-state" role="status">No Pico detected</p>
+  <p id="boot-drive-status"></p>
+  <button id="select-port" type="button">Connect serial port</button>
+  <p id="usb-status" role="status" hidden></p>
+</dialog>
+
+<script defer src="pico-console.js?v=sweep-sheet-1"></script>
+<script defer src="pico-detect.js?v=sweep-sheet-1"></script>
+</body></html>

@@ -1,0 +1,597 @@
+%PDF-1.3
+%‚„œ”
+1 0 obj
+<<
+/Producer (pypdf)
+/Title (Timer phone lock)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Contents 5 0 R
+/MediaBox [ 0 0 585 741.5 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F3 9 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+5 0 obj
+<<
+/Length 6355
+>>
+stream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+BT
+/F2 11 Tf
+13.2 TL
+ET
+0.137255 0.403922 0.364706 rg
+BT
+1 0 0 1 44 693 Tm
+(PICO LAB   \057   ARDUINO   \057   PROJECT 15) Tj
+T*
+ET
+BT
+/F3 30 Tf
+36 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 650 Tm
+(Timer phone lock) Tj
+T*
+ET
+BT
+/F1 13 Tf
+15.6 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 619 Tm
+(Set a duration from one minute to 365 days\056 The latch closes at 90\260) Tj
+T*
+ET
+BT
+/F1 13 Tf
+15.6 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 599 Tm
+(and opens at 0\260\056 The LCD shows Unlocked or Locked\054 with the time below\056) Tj
+T*
+ET
+BT
+/F3 15 Tf
+18 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 558 Tm
+(Button) Tj
+T*
+ET
+BT
+/F3 15 Tf
+18 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 151 558 Tm
+(During setup) Tj
+T*
+ET
+BT
+/F3 15 Tf
+18 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 344 558 Tm
+(While locked) Tj
+T*
+ET
+0.937255 0.960784 0.945098 rg
+n
+44 518 497 26 re
+f*
+BT
+/F3 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 52 527 Tm
+(B1   GP2) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 151 527 Tm
+(Choose min\054 hour or day) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 344 527 Tm
+(Choose the unit to add) Tj
+T*
+ET
+BT
+/F3 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 52 499 Tm
+(B2   GP3) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 151 499 Tm
+(Increase \050hold to repeat\051) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 344 499 Tm
+(Add one unit per press) Tj
+T*
+ET
+0.937255 0.960784 0.945098 rg
+n
+44 462 497 26 re
+f*
+BT
+/F3 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 52 471 Tm
+(B3   GP4) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 151 471 Tm
+(Decrease \050hold to repeat\051) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 344 471 Tm
+(Inactive) Tj
+T*
+ET
+BT
+/F3 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 52 443 Tm
+(B4   GP5) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 151 443 Tm
+(Start the locking delay) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 344 443 Tm
+(Inactive) Tj
+T*
+ET
+0.937255 0.960784 0.945098 rg
+n
+44 406 497 26 re
+f*
+BT
+/F3 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 52 415 Tm
+(B5   GP6) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 151 415 Tm
+(Cancel the locking delay) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 344 415 Tm
+(Unlock now and clear timer) Tj
+T*
+ET
+BT
+/F3 17 Tf
+20.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 369 Tm
+(Try extending a one\055minute lock) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 344 Tm
+(With the compartment empty\054 set one minute and press B4\056 During the) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 326 Tm
+(five\055second delay\054 tap any button to cancel\056 Once locked\054 tap B2 to add) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 308 Tm
+(one minute\056 To add an hour\054 tap B1 until the hours field is underlined\054) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 290 Tm
+(then tap B2\056 The remaining time increases on the second row\056) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 272 Tm
+(Extensions stop at 365 days remaining\056 B5 ends the test immediately\056) Tj
+T*
+ET
+BT
+/F3 17 Tf
+20.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 229 Tm
+(Wire the test button) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 204 Tm
+(Use the Project 14 wiring for B1\226B4\054 the servo and the LCD\056 Put B5 across) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 186 Tm
+(the trench\056 Wire one leg to GP6 \050pin 9\051 and the diagonal leg to common) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 168 Tm
+(GND\056 All five buttons use the Pico\222s internal pull\055ups\056) Tj
+T*
+ET
+BT
+/F3 17 Tf
+20.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 123 Tm
+(If power is interrupted) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 98 Tm
+(The Pico saves the timer on lock\054 after each extension and every five minutes\056) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 80 Tm
+(It resumes from the last save\054 so up to five powered minutes may repeat\056) Tj
+T*
+ET
+BT
+/F1 12 Tf
+14.4 TL
+ET
+0.094118 0.219608 0.219608 rg
+BT
+1 0 0 1 44 62 Tm
+(Time pauses without power\056 The unpowered latch relies on its mechanics\056) Tj
+T*
+ET
+
+Q
+q
+0.0 0.0 585 741.5 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+q
+14 0 0 14 125 531 cm
+0.094118 0.207843 0.207843 RG
+0.12 w
+1 j
+1 J
+n
+0.487641 -0.048028 m
+0.487641 0.048028 l
+0.344499 0.104502 l
+0.317492 0.169703 l
+0.378775 0.310853 l
+0.310853 0.378775 l
+0.169703 0.317492 l
+0.104502 0.344499 l
+0.048028 0.487641 l
+-0.048028 0.487641 l
+-0.104502 0.344499 l
+-0.169703 0.317492 l
+-0.310853 0.378775 l
+-0.378775 0.310853 l
+-0.317492 0.169703 l
+-0.344499 0.104502 l
+-0.487641 0.048028 l
+-0.487641 -0.048028 l
+-0.344499 -0.104502 l
+-0.317492 -0.169703 l
+-0.378775 -0.310853 l
+-0.310853 -0.378775 l
+-0.169703 -0.317492 l
+-0.104502 -0.344499 l
+-0.048028 -0.487641 l
+0.048028 -0.487641 l
+0.104502 -0.344499 l
+0.169703 -0.317492 l
+0.310853 -0.378775 l
+0.378775 -0.310853 l
+0.317492 -0.169703 l
+0.344499 -0.104502 l
+h
+S
+n
+0.15 0 m
+0.15 0.082843 0.082843 0.15 0 0.15 c
+-0.082843 0.15 -0.15 0.082843 -0.15 0 c
+-0.15 -0.082843 -0.082843 -0.15 0 -0.15 c
+0.082843 -0.15 0.15 -0.082843 0.15 0 c
+S
+Q
+q
+14 0 0 14 125 503 cm
+0.094118 0.207843 0.207843 RG
+0.12 w
+1 j
+1 J
+n
+-0.36 0 m
+0.36 0 l
+S
+n
+0 -0.36 m
+0 0.36 l
+S
+Q
+q
+14 0 0 14 125 475 cm
+0.094118 0.207843 0.207843 RG
+0.12 w
+1 j
+1 J
+n
+-0.36 0 m
+0.36 0 l
+S
+Q
+q
+14 0 0 14 125 447 cm
+0.094118 0.207843 0.207843 RG
+0.12 w
+1 j
+1 J
+n
+-0.24 0.1 m
+-0.24 0.26 l
+-0.24 0.57 0.24 0.57 0.24 0.26 c
+0.24 0.1 l
+S
+n
+-0.335 -0.43 m
+0.335 -0.43 l
+0.365404 -0.43 0.39 -0.405404 0.39 -0.375 c
+0.39 0.055 l
+0.39 0.085404 0.365404 0.11 0.335 0.11 c
+-0.335 0.11 l
+-0.365404 0.11 -0.39 0.085404 -0.39 0.055 c
+-0.39 -0.375 l
+-0.39 -0.405404 -0.365404 -0.43 -0.335 -0.43 c
+h
+S
+Q
+Q
+
+endstream
+endobj
+6 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Courier-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+9 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000080 00000 n 
+0000000139 00000 n 
+0000000188 00000 n 
+0000000433 00000 n 
+0000006840 00000 n 
+0000006947 00000 n 
+0000007054 00000 n 
+0000007164 00000 n 
+trailer
+<<
+/Size 10
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+7276
+%%EOF
